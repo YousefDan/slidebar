@@ -1,0 +1,84 @@
+body{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.slider-container{
+    background-color:#efefef;
+    width: 450px;
+    height: 300px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 1px 1px 3px 0px #968f8f;
+}
+
+img{
+    width: 100%;
+    height: 100%;
+    display: block;
+    transition: all 1s linear;
+}
+
+.slider-images{
+    width: 450px;
+    height: 272px;
+    margin: auto;
+    overflow: hidden;
+    position: relative;
+    
+}
+.c1{
+    position: absolute;
+    left: 0;
+
+}
+.c2{
+    position: absolute;
+    left: 100%;
+}
+.c3{
+    position: absolute;
+    left: 200%;
+}
+#button2:checked ~ .slider-images > .c2{
+   left: 0;
+}
+#button2:checked ~ .slider-images > .c1{
+    left: -100%;
+}
+#button2:checked ~ .slider-images > .c3{
+    left: 100%;
+}
+#button3:checked ~ .slider-images > .c3{
+    left: 0;
+}
+#button3:checked ~ .slider-images > .c2{
+    left: -100%;
+}
+#button3:checked ~ .slider-images > .c1{
+    left: -200%;
+}
+
+input[id="button1"]{
+   position: absolute;
+   left: 45%;
+   top: 93%;
+   z-index: 20;
+}
+
+input[id="button2"]{
+    position: absolute;
+    left: 50%;
+    top: 93%;
+    z-index: 20;
+}
+input[id="button3"]{
+    position: absolute;
+    left: 55%;
+    top: 93%;
+    z-index: 20;
+}
+
+
